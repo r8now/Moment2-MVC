@@ -1,0 +1,38 @@
+﻿
+@model List<testMVC.Models.ListModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="text-center">
+   
+ 
+ <h1 class="display-4">ToDoList!</h1>
+     <br />
+
+
+    <table class="table">
+        <tr> 
+            <th>Name</th>
+            <th>Todo</th>
+            <th>Time</th>
+
+        </tr>
+    @if(Model != null)
+    {
+        @foreach(var list in Model)
+        {
+            <tr>
+            <td>@list.name</td> 
+            <td>@list.todo</td> 
+            <td>@list.time</td> 
+
+            </tr>
+        }
+    }
+</table>
+
+</div>

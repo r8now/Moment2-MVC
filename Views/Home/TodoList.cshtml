@@ -1,0 +1,33 @@
+﻿@model  testMVC.Models.ListModel
+
+@{
+    ViewData["Title"] = "TodoList";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>@ViewBag.text</h3>
+
+
+
+<!-- <form method="post" asp-controller="Home" asp-action="create"> -->
+
+<form method="post" >
+    <div asp-validation-summary="All"></div>
+    <label asp-for="name"></label>
+    <input asp-for="name" />
+  <br /> <br /> 
+    <label asp-for="todo"></label>
+    <input asp-for="todo" />
+  <br /> <br /> 
+  <label asp-for="time"></label>
+    <input asp-for="time" />
+ <br /> <br /> 
+  <input type="submit" value="Lägg till" />
+
+
+</form>
+
+
+                          <h2 class="text-center"> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Link to ToDolist!</a></h2>  
+                      
